@@ -1,16 +1,33 @@
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpClientModule }    from '@angular/common/http';
+
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
 
 import { AppComponent } from './app.component';
+import { LocationComponent } from './components/location/location.component';
+import { LocationDetailComponent } from './components/location-detail/location-detail.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
+
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocationComponent,
+    LocationDetailComponent,
+    MessagesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ { provide: LOCALE_ID, useValue: 'es-ES' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

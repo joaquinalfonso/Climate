@@ -1,0 +1,35 @@
+<div *ngIf="detail">
+
+<div class="alert alert-info" role="alert">
+        {{detail.NextWeek}}
+      </div>
+
+<!-- <ul>
+    <li *ngFor="let day of detail.Daily">
+      {{ day.Date | date:'shortDate' }}
+    </li>
+  </ul> -->
+
+<div class="row">
+  <div *ngFor="let day of detail.Daily">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-img-top">
+                <h2 class='text-center'>
+                        {{ day.Date | date:'shortDate' }}
+                </h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ day.Icon }}</h5>
+                <p class="card-text">{{ day.Description }}</p>
+                
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Lat: {{detail.latitude}}
+Lon: {{detail.longitude}} -->
+</div>
