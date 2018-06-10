@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClimateApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Climate
+>>>>>>> 32fe04f10682e9ade786d0e55cffa0e11f0785ee
