@@ -10,6 +10,8 @@ export class LocationDetailComponent implements OnInit {
 
   @Input() detail: object; 
 
+  currentClasses: {};
+
   constructor() { }
 
   ngOnInit() {

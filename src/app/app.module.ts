@@ -11,6 +11,7 @@ import { LocationComponent } from './components/location/location.component';
 import { LocationDetailComponent } from './components/location-detail/location-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { ReplaceStrPipe } from './replace-char.pipe';
 
 registerLocaleData(localeEs, 'es');
 
@@ -19,7 +20,8 @@ registerLocaleData(localeEs, 'es');
     AppComponent,
     LocationComponent,
     LocationDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    ReplaceStrPipe
   ],
   imports: [
     BrowserModule,

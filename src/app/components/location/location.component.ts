@@ -24,14 +24,18 @@ export class LocationComponent implements OnInit {
   constructor( private irrisatService : IrrisatService ) { }
 
   ngOnInit() {
+      
+   }
+
+  localize() {
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition( (position) => {
               this.myLocation.latitude = position.coords.latitude; 
               this.myLocation.longitude = position.coords.longitude;
       });
-      
-  }
-  }
+    }
+}
 
   onClick() {
         //console.log("Lat: " + this.myLocation.latitude + " Lon: "+ this.myLocation.longitude);

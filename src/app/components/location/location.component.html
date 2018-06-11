@@ -1,22 +1,16 @@
 
 
-
-<div class="row">
-  <div class="col">
-    <label>Latitude:
-      <input [(ngModel)]="myLocation.latitude" class="form-control text-right" placeholder="Latitude">
-    </label>
-  </div>
-
-  <div class="col">
-    <label>Longitude:
-      <input [(ngModel)]="myLocation.longitude" class="form-control text-right" placeholder="Longitude">
-    </label>
-  </div>
-
-  <div class="col">
-    <button class="btn" (click)="onClick()">Get !!</button> 
-  </div>
+<div class="form-check form-check-inline">   
+    <label class="form-check-label" for="inlineCheckbox1">Latitude</label>
+    <input [(ngModel)]="myLocation.latitude" class="form-control text-right" placeholder="Latitude">
+</div>
+<div class="form-check form-check-inline">
+    <label class="form-check-label" for="inlineCheckbox2">Longitude</label>
+    <input [(ngModel)]="myLocation.longitude" class="form-control text-right" placeholder="Longitude">
+</div>
+ <div class="form-check form-check-inline">
+      <button class="btn btn-primary" (click)="localize()">Localize me!!</button> 
+      <button class="btn btn-primary" (click)="onClick()">Get !!</button>       
 </div>
 
 <app-location-detail [detail]="et0"></app-location-detail>

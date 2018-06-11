@@ -10,24 +10,36 @@
     </li>
   </ul> -->
 
-<div class="row">
-  <div *ngFor="let day of detail.Daily">
-    <div class="col-12">
+<ul>
+  <li *ngFor="let day of detail.Daily">
+    <div class="col-12__">
         <div class="card">
             <div class="card-img-top">
-                <h2 class='text-center'>
-                        {{ day.Date | date:'shortDate' }}
-                </h2>
+                
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{ day.Icon }}</h5>
-                <p class="card-text">{{ day.Description }}</p>
-                
+              <div class="row">
+                <div class="col-4">
+                  <h5 class="card-title">
+                      {{ day.Date | date:'shortDate' }}
+                      {{ day.Icon | uppercase | replaceStr : "-":" " }}
+                  </h5>
+                </div>
+                <div class="col-4">
+                  <p class="card-text">{{ day.Description }}</p>
+                </div>
+                <div class="col-2">
+                  <p class="card-text">Et0 {{ day.ET0 }}</p>                
+                </div>
+                <div class="col-2">
+                  <p class="card-text">% Precipitation <span class="badge">{{ day.PrecipProbability }}</span></p>
+                </div>
+              </div>                
             </div>
         </div>
     </div>
-  </div>
-</div>
+  </li>
+</ul>
 
 
 <!-- Lat: {{detail.latitude}}
