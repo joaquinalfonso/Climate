@@ -1,16 +1,62 @@
+<!-- <div class="form-check form-check-inline">   
+        <label class="form-check-label" for="inlineCheckbox1">Latitude</label>
+        <input [(ngModel)]="myLocation.latitude" class="form-control text-right" placeholder="Latitude">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="inlineCheckbox2">Longitude</label>
+        <input [(ngModel)]="myLocation.longitude" class="form-control text-right" placeholder="Longitude">
+    </div>
+    <div class="form-check form-check-inline">
+        <button class="btn btn-primary" (click)="localize()">Localize me!!</button> 
+        <button class="btn btn-primary" (click)="onClick()">Get !!</button>       
+    </div> -->
 
 
-<div class="form-check form-check-inline">   
-    <label class="form-check-label" for="inlineCheckbox1">Latitude</label>
-    <input [(ngModel)]="myLocation.latitude" class="form-control text-right" placeholder="Latitude">
+<div class="row margin-10">
+    <!-- <div class="col-md-3 col-sm-12 col-xs-12">
+            <button (click)="setMapType('terrain')" class="btn btn-primary">Terrain</button>
+              <button (click)="setMapType('satellite')" class="btn btn-danger">Satellite</button>
+              <button (click)="setMapType('roadmap')" class="btn btn-warning">Road Map</button>
+            </div> -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <form class="form-inline" #form="ngForm">
+            <div class="form-check form-check-inline">
+                <label class="form-check-label" for="latitude">Latitude</label>
+                <input type="text" class="form-control" name="latitude" [(ngModel)]="myLocation.latitude" placeholder="Enter latitude" required>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label" for="longitude">Latitude</label>
+                <input type="text" class="form-control margin-10" name="longitude" [(ngModel)]="myLocation.longitude" placeholder="Enter longitude"
+                    required>
+            </div>
+
+            <div class="col-md-6_ col-sm-6_ col-xs-12_">
+                <button type="button" (click)="localize()" class="btn btn-primary margin-10">Localize me!!</button>
+                <button type="button" (click)="onClick()" class="btn btn-primary" [disabled]="form.invalid"> Get climate</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Select Marker: </label>
+                <select [(ngModel)]="selectedMarkerType" name="category">
+                  <option *ngFor="let marker of markerTypes" [value]="marker.value">{{marker.text}}</option>
+                </select>
+              <button type="button" (click)="showCustomMarker()" class="btn btn-primary" [disabled]="form.invalid"> Custom Marker</button>
+            </div> -->
 </div>
-<div class="form-check form-check-inline">
-    <label class="form-check-label" for="inlineCheckbox2">Longitude</label>
-    <input [(ngModel)]="myLocation.longitude" class="form-control text-right" placeholder="Longitude">
-</div>
- <div class="form-check form-check-inline">
-      <button class="btn btn-primary" (click)="localize()">Localize me!!</button> 
-      <button class="btn btn-primary" (click)="onClick()">Get !!</button>       
+
+
+<div class="row margin-10">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h3>
+                <div #gmap style="width:100%;height:400px"></div>
+            </h3>
+        </div>
+    </div>
 </div>
 
 <app-location-detail [detail]="et0"></app-location-detail>

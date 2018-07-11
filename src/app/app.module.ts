@@ -5,6 +5,7 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { LocationComponent } from './components/location/location.component';
@@ -12,6 +13,7 @@ import { LocationDetailComponent } from './components/location-detail/location-d
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ReplaceStrPipe } from './replace-char.pipe';
+
 
 registerLocaleData(localeEs, 'es');
 
@@ -27,7 +29,8 @@ registerLocaleData(localeEs, 'es');
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    ChartsModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'es-ES' } ],
   bootstrap: [AppComponent]

@@ -49,7 +49,7 @@ export class IrrisatService {
 
       let apiURL = `${this.et0Url}/${latitude.toString().replace(',','.')}/${longitude.toString().replace(',','.')}`;
 
-      console.log(apiURL);
+      //console.log(apiURL);
 
       this.http.get(apiURL)
           .toPromise()
@@ -70,7 +70,7 @@ export class IrrisatService {
                 //   );
                 // });
                 // this.results = res.json().results;
-                console.log("OK");
+                //console.log("OK");
                 resolve(res);
               },
               msg => { // Error
