@@ -12,7 +12,7 @@ import { LocationComponent } from './components/location/location.component';
 import { LocationDetailComponent } from './components/location-detail/location-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { ReplaceStrPipe } from './replace-char.pipe';
+import { ReplaceStrPipe } from './shared/pipes/replace-char.pipe';
 
 
 registerLocaleData(localeEs, 'es');

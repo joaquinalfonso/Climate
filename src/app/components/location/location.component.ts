@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '../../location';
-import { IrrisatService } from '../../irrisat.service';
+import { LocationClass } from '../../shared/models/location';
+import { IrrisatService } from '../../shared/services/irrisat.service';
 import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 
@@ -17,8 +17,8 @@ export class LocationComponent implements OnInit {
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
 
-  myLocation : Location = {
-    name:"loca",
+  myLocation : LocationClass = {
+    name:"location",
     latitude: null,
     longitude: null
   };
