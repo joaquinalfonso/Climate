@@ -28,6 +28,7 @@
     "lodash": "^4.17.11",
     "ng2-charts": "^1.6.0",
     "rxjs": "^6.0.0",
+    "timespan": "^2.3.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
